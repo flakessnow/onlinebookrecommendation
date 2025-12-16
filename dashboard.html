@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard | BOOKVERSE</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h2>📚 BOOKVERSE</h2>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="profile.html">Profile</a>
+    <a href="wrap.html">Bookverse Wrap</a>
+    <a href="admin.html">Admin</a>
+    <a href="#" onclick="logout()">Logout</a>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <div class="topbar">
+      <input id="search" placeholder="Search books..." onkeyup="filterBooks()">
+      <button class="dark-btn" onclick="toggleDark()">🌙</button>
+    </div>
+
+    <section class="grid" id="bookGrid">
+
+      <div class="book-card" data-name="fantasy">
+        <img src="https://picsum.photos/400/400?random=21">
+        <h3>Fantasy</h3>
+        <div class="stars" onclick="rate(event)">★★★★★</div>
+      </div>
+
+      <div class="book-card" data-name="science">
+        <img src="https://picsum.photos/400/400?random=22">
+        <h3>Science</h3>
+        <div class="stars" onclick="rate(event)">★★★★★</div>
+      </div>
+
+      <div class="book-card" data-name="romance">
+        <img src="https://picsum.photos/400/400?random=23">
+        <h3>Romance</h3>
+        <div class="stars" onclick="rate(event)">★★★★★</div>
+      </div>
+
+      <div class="book-card" data-name="thriller">
+        <img src="https://picsum.photos/400/400?random=24">
+        <h3>Thriller</h3>
+        <div class="stars" onclick="rate(event)">★★★★★</div>
+      </div>
+
+    </section>
+
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
